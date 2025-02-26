@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Reels Video Download</title>
+    <link rel="icon" type="icon.png" href="New folder (2)\favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        .container {
+        max-width: 1300px;
+        margin: auto;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .features-box {
+        background-color: #1e1e30;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        font-size: 16px;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    ul li::before {
+        content: "✔";
+        color: #a855f7;
+        margin-right: 8px;
+        font-weight: bold;
+    }
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .logo {
+            color: #9333ea;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-color: #8b43f2;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .download-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .url-input {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .download-btn {
+            background-color: #10b981;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .download-btn i {
+            margin-right: 10px;
+        }
+
+        .videobox {
+            width: 100%;
+            max-width: 220px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #videoPlayer {
+            border-radius: 5px;
+            height: 400px;
+            margin-bottom: 15px;
+        }
+
+        .secondary-btn {
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width:210px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .secondary-btn i {
+            margin-right: 8px;
+        }
+        .faq-container {
+        max-width: 1300px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .faq-item {
+        background-color: #8b43f2;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .faq-question {
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .faq-icon {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .faq-answer {
+        padding: 15px;
+        display: none;
+        background-color: white;
+        color: #333;
+        font-size: 16px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    .faq-item.active .faq-answer {
+        display: block;
+    }
+
+    .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+    }
+    .footer {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+        border-top: 1px solid #ddd;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content:space-evenly;
+        gap: 50px;
+        flex-wrap: wrap;
+        padding-bottom: 15px;
+    }
+
+    .footer-column {
+        text-align: left;
+    }
+
+    .footer-column h4 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 5px;
+    }
+
+    .footer-column ul li a {
+        text-decoration: none;
+        color: #333;
+        transition: 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+        color: #6a0dad;
+    }
+
+    .footer-bottom {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .footer-bottom a {
+        color: #6a0dad;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        @media (max-width: 768px) {
+            .download-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .url-input {
+                margin-right: 0;
+                width: calc(100% - 30px);
+            }
+            
+            .download-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Instagram Downloader</div>
+    </div>
+    
+    <div class="hero">
+        <h1>Instagram Reels Video Download</h1>
+        <p>Instagram - Reels Video Downloader</p>
+        
+        <div class="download-container">
+            <input type="text" id="videoUrl" class="url-input" placeholder="Paste URL Instagram">
+            <button onclick="fetchVideo()" class="download-btn">
+                <i class="fas fa-download"></i> Download
+            </button>
+        </div>
+    </div>
+    
+    <div id="videoContainer" class="videobox" style="display: none;">
+        <video id="videoPlayer" controls></video>
+        <button onclick="downloadVideo()" class="secondary-btn">
+            <i class="fas fa-download"></i> Download Video
+        </button>
+    </div>
+    <div class="container">
+        <h2>What is Instagram Reels ?</h2>
+        <p>
+            <strong>Instagram Reels</strong> is a new feature of Instagram that allows you to create short-form videos, 
+            with 2 options of length of 15 and 30 seconds. Although there are some similarities with TikTok, Reels still 
+            makes users excited by combining Instagram's outstanding editing functions. Users are free to edit and design 
+            interesting videos to create their own unique movies.
+        </p>
+    
+        <div class="features-box">
+            <h3>Features of Instagram Reels downloader:</h3>
+            <ul>
+                <li>✔ Fast, easy and safe.</li>
+                <li>✔ You can download videos and pictures of Instagram just by clicking on a button.</li>
+                <li>✔ Save and download Instagram Reels from personal accounts.</li>
+                <li>✔ No need to login to your Instagram account.</li>
+                <li>✔ Save and download videos and photos in their original resolution and quality.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="faq-container">
+        <h2>FAQ</h2>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                Do you need a Login when downloading Reels?
+                <span class="faq-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Oh No, you don't need to login to your account, It'll be safe for you, And download is easy.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                Is it illegal to download videos from Instagram Reels?
+                <span class="faq-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Downloading videos from Instagram Reels depends on Instagram’s terms of service and your country’s copyright laws.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                Do I have to pay to download videos from Instagram Reels?
+                <span class="faq-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                No, downloading videos from Instagram Reels is free with our service.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                Am I limited in video downloads from Instagram?
+                <span class="faq-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                There is no limit to the number of videos you can download from Instagram Reels.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                Where will videos downloaded from Instagram be saved?
+                <span class="faq-icon">&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Downloaded videos are usually saved in your device's "Downloads" folder.
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Tools</h4>
+                <ul>
+                    <li><a href="index.html">Instagram Story Downloader</a></li>
+                    <li><a href="index.html">Instagram Reels Downloader</a></li>
+                    <li><a href="index.html">Instagram Profile Picture Downloader</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="index.html">Terms of Service</a></li>
+                    <li><a href="index.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+
+            <p>© 2025 <a href="index.html">Instagram Downloader</a> 4.0.0 (127). All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+          document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+        async function fetchVideo() {
+            const videoUrl = document.getElementById('videoUrl').value;
+            if (!videoUrl) return alert('Please enter a valid URL');
+
+            const apiUrl = 'https://social-media-video-downloader.p.rapidapi.com/smvd/get/all';
+            const headers = {
+                'X-RapidAPI-Key': 'b1cb257190msh5367e49168e7b56p158ad1jsna3f9cc0b1319',
+                'X-RapidAPI-Host': 'social-media-video-downloader.p.rapidapi.com'
+            };
+
+            try {
+                const response = await fetch(`${apiUrl}?url=${encodeURIComponent(videoUrl)}&filename=download`, { headers });
+                const data = await response.json();
+
+                const videoLinks = data.links.filter(link => !link.quality.includes('audio_0'));
+                if (videoLinks.length > 0) {
+                    const videoElement = document.getElementById('videoPlayer');
+                    videoElement.src = videoLinks[0].link;
+                    document.getElementById('videoContainer').style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Error fetching video:', error);
+            }
+        }
+
+        async function downloadVideo() {
+            const videoElement = document.getElementById('videoPlayer');
+            if (!videoElement.src) return;
+
+            try {
+                const response = await fetch(videoElement.src);
+                const blob = await response.blob();
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'Instagram_Reel.mp4';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } catch (error) {
+                console.error('Error downloading video:', error);
+            }
+        }
+    </script>
+</body>
+</html>
